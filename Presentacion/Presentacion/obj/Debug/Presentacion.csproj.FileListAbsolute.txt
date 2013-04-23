@@ -1,5 +1,0 @@
-C:\Users\hhegykozi\Desktop\LPPA\Presentacion\Presentacion\bin\Presentacion.dll
-C:\Users\hhegykozi\Desktop\LPPA\Presentacion\Presentacion\bin\Presentacion.pdb
-C:\Users\hhegykozi\Desktop\LPPA\Presentacion\Presentacion\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\hhegykozi\Desktop\LPPA\Presentacion\Presentacion\obj\Debug\Presentacion.dll
-C:\Users\hhegykozi\Desktop\LPPA\Presentacion\Presentacion\obj\Debug\Presentacion.pdb
