@@ -1,0 +1,59 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Site.Master.vb" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Administracion.css" rel="stylesheet" type="text/css" />
+    <title>Venta de Zapatillas</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="scmMaster" runat="server">
+    </asp:ScriptManager>
+    <div style="width: 100.5%; float: left; height: 30px; background: #ece8da url(images/ui-bg_highlight-soft_75_ece8da_1x100.png) 50% 50% repeat-x;">
+        <div id="divLnkInicio" style="float: left; padding: 4px 1em 0 2em;">
+            <asp:LinkButton ID="LnkInicio" runat="server" Text="Inicio" OnClick="LnkInicio_Click"
+                CssClass="menu"></asp:LinkButton>
+        </div>
+        <div id="divLnkAdmUsuarios" style="float: left; padding: 4px 1em 0 1em">
+            <asp:LinkButton ID="lnkAdminstracion" runat="server" Text="Administracion" CssClass="menu"></asp:LinkButton>
+        </div>
+        <div id="divLnkProductos" style="float: left; padding: 4px 1em 0 2em;">
+            <asp:LinkButton ID="LnkProducto" runat="server" Text="Productos" CssClass="menu"></asp:LinkButton>
+        </div>
+        <div id="divLnkVentas" style="float: left; padding: 4px 1em 0 2em;">
+            <asp:LinkButton ID="LnkVentas" runat="server" Text="Ventas" CssClass="menu"></asp:LinkButton>
+        </div>
+        <div id="divLnkSalir" class="button" style="float: right; padding: 4px 4px 0 0;">
+            <asp:LinkButton ID="lnkSalir" runat="server" Text="Salir" CssClass="arial12negro"
+                OnClick="lnkSalir_Click"></asp:LinkButton>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar1">
+            <ul id="sample-menu-3">
+                <li id="liQuienesSomos" runat="server">
+                    <asp:LinkButton ID="LnkQuienesSomos" runat="server" Text="Quienes Somos" CssClass="menu"></asp:LinkButton>
+                </li>
+                <li id="liPermisos" runat="server">
+                    <asp:LinkButton ID="LnkPermisos" runat="server" Text="Permisos" CssClass="menu"></asp:LinkButton>
+                </li>
+                <li id="liBitacora" runat="server">
+                    <asp:LinkButton ID="LinkBitacora" runat="server" Text="Bitacora" CssClass="menu"></asp:LinkButton>
+                </li>
+                <li id="liBackupRestored" runat="server">
+                    <asp:LinkButton ID="lnkBackupRestored" runat="server" Text="BackUpRestored" CssClass="menu"></asp:LinkButton>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
