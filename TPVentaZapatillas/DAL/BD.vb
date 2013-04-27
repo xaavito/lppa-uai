@@ -6,7 +6,7 @@ Public Class BD
     Public Shared mTr As SqlTransaction
 #End Region
 #Region "Stored Procedures"
-    Shared StrConnection As String = ConfigurationSettings.AppSettings("connectionString")
+    Shared StrConnection As String = System.Configuration.ConfigurationManager.AppSettings("connectionString")
     Public Shared Function GetData(ByVal unNombreSp As String, ByVal unDS As DataSet, ByVal UnHashTable As Hashtable) As Boolean
         Dim result As Boolean = True
         If (mTr Is Nothing) Then
