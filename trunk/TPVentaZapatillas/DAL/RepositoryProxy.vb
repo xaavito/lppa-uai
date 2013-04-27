@@ -45,7 +45,7 @@ Public Class RepositoryProxy
     End Function
 
     Public Function ExecuteNonQuery() As Integer Implements IRepository.ExecuteNonQuery
-        _repository.ExecuteNonQuery()
+        Return _repository.ExecuteNonQuery()
     End Function
 
     Public Function ExecuteReturnValue() As Object Implements IRepository.ExecuteReturnValue
