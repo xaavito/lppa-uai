@@ -1,6 +1,6 @@
 ﻿Public Class CannotOpenConnectionDataBaseException
     Inherits CustomException
-
+    ' prueba
     Public Sub New()
         MyBase.New("ExDAO001", "No se pudo abrir la conexión con la base de datos.")
     End Sub
