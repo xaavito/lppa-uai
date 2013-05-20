@@ -110,6 +110,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD.vb" />
+    <Compile Include="DALDV.vb" />
+    <Compile Include="DALUsuario.vb" />
     <Compile Include="IRepository.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -151,6 +153,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BE\BE.vbproj">
+      <Project>{19DB97F6-A4F3-44F5-B624-F18CDF88A4C5}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Excepciones\Excepciones.vbproj">
       <Project>{DE246FD6-3509-4D7C-9C9F-16FAB431C4E8}</Project>
       <Name>Excepciones</Name>

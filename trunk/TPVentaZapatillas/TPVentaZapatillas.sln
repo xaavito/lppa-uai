@@ -12,6 +12,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Website", "Website\", "{034
 		SccLocalPath = "Svn"
 		SccProvider = "SubversionScc"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{19DB97F6-A4F3-44F5-B624-F18CDF88A4C5}|BE.dll;{9EA6D83C-9BED-4516-8DE7-8013A06F977F}|BLL.dll;{DE246FD6-3509-4D7C-9C9F-16FAB431C4E8}|Excepciones.dll;{CC3B8C34-6C08-4C65-BAEC-99D4451AA114}|DAL.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/Website"
 		Debug.AspNetCompiler.PhysicalPath = "Website\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Website\"
@@ -26,7 +27,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Website", "Website\", "{034
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "7287"
+		VWDPort = "19417"
 	EndProjectSection
 	ProjectSection(SvnOrigin) = preProject
 		@Keys = Enlist,Svn.Uri
