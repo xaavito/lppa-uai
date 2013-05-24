@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD.vb" />
+    <Compile Include="DALBitacora.vb" />
     <Compile Include="DALDV.vb" />
     <Compile Include="DALUsuario.vb" />
     <Compile Include="IRepository.vb" />

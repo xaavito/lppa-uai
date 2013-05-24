@@ -90,6 +90,7 @@ Partial Class Site
             'Luego de las validaciones que se hicieron del lado del cliente . Se valida en base de datos su existencia
             UsuarioLogueado = Usuario.CargarUsuario(IdUsuario, txtUsuario.Text.Trim, txtContrasenia.Text.Trim)
             If (IdUsuario > 0) Then
+                BLL.Bitacora.setBitacora(UsuarioLogueado, "Logueo Exitoso", 1)
                 ' Si existe el usuario se actualiza la variable de sesion
                 Me.Session("UsrLogueado") = UsuarioLogueado
                 ListPermisos = Usuario.GetPermisos(UsuarioLogueado.IdPerfil)
@@ -102,6 +103,7 @@ Partial Class Site
                 Me.Session("PaginaActual") = "Inicio.aspx"
             Else
                 lblError.Text = "Usuario no habilitado para utilizar el sistema"
+                BLL.Bitacora.setBitacora(Nothing, "Logueo Fallido de Usuario " + txtUsuario.Text.Trim + " pass " + txtContrasenia.Text.Trim, 1)
             End If
         Catch ex As Exception
             'Registrar en bitacora
@@ -120,6 +122,7 @@ Partial Class Site
         For Each P As BEPermiso In ListPermisos
             ArrayPerm = ArrayPerm + P.LinkPermiso + "|"
         Next
+        BLL.Bitacora.setBitacora(CType(Me.Session("UsrLogueado"), BEUsuario), "Se cargaron los siguientes Permisos: " + ArrayPerm, 1)
         ' Actualizo Hidden field de Permisos de usuario
         hdnPermisosUsr.Value = ArrayPerm.Substring(0, ArrayPerm.Length - 1)
         'Actualizo hidden field de pagina actual
