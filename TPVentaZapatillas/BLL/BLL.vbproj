@@ -64,6 +64,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bitacora.vb" />
     <Compile Include="DVV.vb" />
     <Compile Include="Permisos.vb" />
     <Compile Include="Usuario.vb" />
