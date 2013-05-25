@@ -91,9 +91,9 @@ Public Class DVV
                     Exit For
                 End If
                 NombreTabla = row("NombreTabla")
-                ' UnHiloBackground.ReportProgress(i)
+
                 i += 1
-                'System.Threading.Thread.Sleep(300)
+
             Next
         Catch ex As Exception
             'registrar en bitacora

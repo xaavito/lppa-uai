@@ -19,7 +19,7 @@ Partial Class Permisos
         Dim ListaEjemplo As New Generic.List(Of PermisoEjemplo)
         Dim Ej As PermisoEjemplo
         Dim Ej2 As PermisoEjemplo
-        'Dim Ej3 As PermisoEjemplo
+
 
         Ej = New PermisoEjemplo
         Ej.Descripcion = "Productos"
@@ -29,13 +29,9 @@ Partial Class Permisos
         Ej2.Descripcion = "Administracion"
         ListaEjemplo.Add(Ej2)
 
-
-        'Ej3 = New PermisoEjemplo
-        'Ej3.Descripcion = "Administrar Productos"
-        'ListaEjemplo.Add(Ej3)
-
         grdPermisos.DataSource = ListaEjemplo
         grdPermisos.DataBind()
+
     End Sub
     Protected Sub grdPermisos_RowDataBound(ByVal sender As Object, ByVal e As GridViewRowEventArgs)
         If (e.Row.RowType = DataControlRowType.DataRow) Then
