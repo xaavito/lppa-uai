@@ -1,0 +1,800 @@
+﻿body
+{
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-color: #999;
+	background-image: url(../images/fondo-body.gif);
+	background-repeat: repeat-y;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl
+{
+	/* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p
+{
+	margin-top: 0; /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img
+{
+	/* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link
+{
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited
+{
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus
+{
+	/* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.container
+{
+	width: 1010px;
+    height: 142px;
+}
+
+/*Ckases layout*/
+.header
+{
+	background-image: url(../images/fondo-header.gif);
+	background-repeat: repeat-x;
+	height: 61px;
+	width: 1010px;
+}
+.caja-header-derecha
+{
+	float: right;
+	height: 60px;
+	width: 279px;
+	margin-right: 20px;
+}
+.logo
+{
+	float: left;
+	height: 60px;
+	width: 153px;
+	margin-left: 20px;
+}
+
+
+.sidebar1
+{
+	float: left;
+	width: 180px;
+	background-image: url('../Images/top-menu-left.jpg');
+	background-repeat: no-repeat;
+	padding-top: 55px;
+    height: 74px;
+}
+.content
+{
+	width: 830px;
+	float: left;
+}
+.main_content
+{
+	padding: 10px;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol
+{
+	padding: 0 15px 15px 40px;
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav
+{
+	list-style: none; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li
+{
+	background-image: url(../images/raya-div-li.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+ul.nav li.sub
+{
+	background-image: url(../images/flecha-li-menu-sub.gif);
+	background-repeat: no-repeat;
+	background-position: bottom; /*Esta clase*/
+}
+ul.nav a, ul.nav a:visited
+{
+	/* grouping these selectors makes sure that your links retain their button look even after being visited */
+	display: block;
+	width: 160px;
+	text-decoration: none;
+	color: #FFF;
+	font-size: 80%;
+	font-weight: bold;
+	height: 20px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus
+{
+	/* this changes the background and text color for both mouse and keyboard navigators */
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+.footer
+{
+	padding: 10px 0;
+	background: #CCC49F;
+	position: relative; /* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt
+{
+	/* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft
+{
+	/* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat
+{
+	/* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear: both;
+	height: 0;
+	font-size: 1px;
+	line-height: 0px;
+}
+/*Clases area principal*/
+.caja-titulo
+{
+	background-image: url(../images/fondo-caja-titulo.gif);
+	background-repeat: repeat-x;
+	float: left;
+	height: 27px;
+	width: 100%;
+	font-size: 12px;
+	font-weight: bold;
+	color: #005222;
+}
+.float-left
+{
+	display: block;
+	float: left;
+}
+
+.texto-cajas
+{
+	padding-top: 6px;
+	padding-left: 20px;
+}
+.texto-cajas2
+{
+	padding-top: 4px;
+	padding-left: 20px;
+}
+.links-navegacion
+{
+	height: 22px;
+	width: 259px;
+	font-size: 11px;
+	padding-top: 9px;
+	text-transform: uppercase;
+	padding-left: 20px;
+}
+.links-navegacion a, .links-navegacion a:visited, .links-navegacion a:active
+{
+	text-decoration: none;
+	color: #004f26;
+	font-weight: normal;
+}
+.links-navegacion a:hover
+{
+	text-decoration: underline;
+	color: #7BC734;
+}
+
+/*Clases para elementos del header*/
+.buscador
+{
+	background-image: url(../images/fondo-buscador.gif);
+	background-repeat: no-repeat;
+	height: 27px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+	padding-top: 3px;
+}
+
+.caja-botones
+{
+	background-image: url(../images/fondo-caja-botones.gif);
+	background-repeat: repeat-x;
+	float: left;
+	height: 27px;
+	width: 100%;
+	font-size: 12px;
+	font-weight: bold;
+	color: #666;
+}
+
+/*Clases botones*/
+.button
+{
+	color: #fff;
+	background-color: #5ea022;
+	border: 1px solid #5ea022;
+	cursor: pointer;
+	background-image: url(../images/overlay.png);
+	background-repeat: repeat-x;
+	background-position: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 4px 15px;
+	text-decoration: none;
+}
+
+.export
+{
+    width: 100px;
+    background-image: url(../images/exportar.png);    
+    text-align: left;
+}
+
+.exportAccountingEntry
+{
+    width: 150px;
+    background-image: url(../images/exportar2.png);    
+    text-align: left;
+    background-position:right;
+}
+
+a.button
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.button:hover
+{
+	background-color: #6eb82a;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.button:active
+{
+	position: relative;
+	top: 2px;
+}
+
+
+.button-rojo
+{
+	color: #fff;
+	background-color: #CC3300;
+	border: 1px solid #9D0000;
+	cursor: pointer;
+	background-image: url(../images/overlay.png);
+	background-repeat: repeat-x;
+	background-position: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	padding-top: 8px;
+	padding-right: 11px;
+	padding-bottom: 8px;
+	padding-left: 11px;
+	text-decoration: none;
+}
+
+a.button-rojo
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.button-rojo:hover
+{
+	background-color: #E80000;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.button-rojo:active
+{
+	position: relative;
+	top: 2px;
+}
+
+.button-azul
+{
+	color: #fff;
+	background-color: #4b89bd;
+	border: 1px solid #4b89bd;
+	border-bottom: 1px solid #4b89bd;
+	cursor: pointer;
+	background-image: url(../images/overlay.png);
+	background-repeat: repeat-x;
+	background-position: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 4px;
+	padding-right: 15px;
+	padding-bottom: 4px;
+	padding-left: 15px;
+	text-decoration: none;
+}
+
+a.button-azul
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.button-azul:hover
+{
+	background-color: #7aaed9;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.button-azul:active
+{
+	position: relative;
+	top: 2px;
+}
+
+/*Clases tabla filtro*/
+.div-filtro
+{
+	float: left;
+	width: 100%;
+	background-color: #F2F4F0;
+	text-align: center;
+	text-align: -moz-center;
+	background-image: url(../images/sombra-cajas.png);
+	background-repeat: repeat-y;
+}
+
+.div-form
+{
+	float: left;
+	width: 94%;
+	padding: 3%;
+	background-color: #F2F4F0;
+	text-align: center;
+	text-align: -moz-center;
+	background-image: url(../images/sombra-cajas.png);
+	background-repeat: repeat-y;
+}
+
+.div-footerNote
+{
+    float: left;
+    padding: 0% 3%;
+	width: 94%;
+}
+
+.innerDiv-FooterNote
+{
+    border-top : 1px dotted #000;
+    padding: 5px 0;
+    margin: 0px 0px;
+    font-size : 12px; 
+}
+
+.tabla-filtro
+{
+	margin: 0 auto;
+	width: 95%;
+}
+
+.tabla-filtro td
+{
+	text-align: left;
+	padding: 3px 5px 3px 0px;
+}
+
+.tabla-filtro td label
+{	font-size: 12px;
+	font-weight: bold;
+	display:block;
+}
+
+.tabla-filtro td.buscar
+{
+	text-align: right;
+	vertical-align:middle;
+	padding: 0;
+}
+
+
+.botonera td
+{
+	font-size: 12px;
+	font-weight: bold;
+	padding-right: 1px;
+	padding-left: 1px;
+}
+/*Clases grilla*/
+
+.div-grilla
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+	text-align: -moz-center;
+}
+.div-botones
+{
+	text-align:center;
+	margin: 10px 40px 30px 0;
+	float: left;
+	width: 100%;
+}
+
+.tabla-grilla
+{
+	border-collapse:collapse;
+	width: 95%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #5EA022;
+}
+
+.tabla-grilla th
+{
+	font-size: 12px;
+	background-image: url(../images/overlay.png);
+	background-repeat: repeat-x;
+	background-position: center;
+	background-color: #5EA022;
+	color: #FFFFFF;
+	padding: 3px 6px;
+	border: none;
+}
+
+.tabla-grilla th a,
+.tabla-grilla th a:visited,
+.tabla-grilla th a:hover
+{
+	color: #FFFFFF;
+}
+
+.tabla-grilla th a:hover
+{
+	text-decoration:underline;
+	color: #F2F4F0;
+}
+
+
+.tabla-grilla td
+{
+	font-size: 12px;
+	padding: 3px 6px;
+	border: 1px solid #5EA022;
+	text-align: center;
+}
+/*Clases tabla recibo*/
+
+.rightalign
+{
+	text-align: right;	
+}
+
+.div-grilla
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+	text-align: -moz-center;
+}
+.tabla-recibo
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: auto;
+	margin-left: auto; /*border-top-width: 1px; 	border-left-width: 1px; 	border-top-style: solid; 	border-left-style: solid; 	border-top-color: #5EA022; 	border-left-color: #5EA022;*/
+}
+.tabla-recibo th
+{
+	font-size: 12px;
+	padding-right: 6px;
+	padding-left: 6px;
+	background-image: url(../images/overlay.png);
+	background-repeat: repeat-x;
+	background-position: center;
+	background-color: #5EA022;
+	color: #FFFFFF;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.tabla-recibo td
+{
+	font-size: 12px;
+	padding-right: 6px;
+	padding-left: 6px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-weight: bold; /*border-right-width: 1px; 	border-bottom-width: 1px; 	border-right-style: solid; 	border-bottom-style: solid; 	border-right-color: #5EA022; 	border-bottom-color: #5EA022;*/
+	text-align: left;
+}
+
+.div-form
+{
+	font-size: 12px;
+}
+
+.div-form table
+{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.div-form table td
+{
+	text-align: left;
+	padding: 2px;
+}
+
+.div-form table td label
+{
+	font-weight: bold;
+	display: block;
+}
+
+.modalBackground
+{
+	background-color: #fff;
+	filter: alpha(opacity=70);
+	opacity: 0.7px;
+}
+
+.modalWindow
+{
+	border: solid1px#c0c0c0;
+	background: #f0f0f0;
+	padding: 0px10px10px10px;
+}
+
+.error-container
+{
+	border: 1px solid #FFF;
+	background-color: #E0E0E0;
+	color: #E52727;
+	margin: 10px 0px 10px 20px;
+	padding: 3px;
+	float:left;
+	text-align:center;
+	width: 95%;
+}
+
+.error-container ul
+{
+	padding: 0;
+	margin-left:30px;
+	list-style-type:upper-roman;
+}
+.combo-roles
+{
+	width:160px;
+	margin-left: 10px;
+}
+
+.CheckBoxList input
+{
+    float:left;
+    margin-right: 10px;   
+}
+.CheckBoxList
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: Black;
+    width:300px;
+}
+.CheckBoxList table
+{
+    margin-left: 0px;
+    width: 100%;
+}
+
+.CheckBox input
+{
+    float:left;
+}
+
+.CheckBox 
+{
+    margin: 6px 0 12px 0;
+}
+
+.RadioButton input
+{
+    float:left;
+}
+
+.RadioButton 
+{
+    margin: 0px 0 0px 0;
+}
+
+.footerNote
+{
+    font-weight:bold;
+}
+
+.salidas_legales
+{
+    border-top : 1px dotted #000;
+    padding: 5px 0;
+    margin: 30px 0;
+	/*border:1px dotted #FF7F23;
+	background-color:#FFCCA8;
+	margin: 10px 0;
+	text-align:center;
+	width:100%;
+	font-weight:bold;
+	font-size: 12px;*/
+}
+
+.encabezado-detalles
+{
+	border: 1px solid #779BFF;
+	background-color:#B5C8FF;
+	margin: 10px 0;
+	text-align:center;
+	width:100%;
+	
+	font-size: 12px;
+}
+
+.encabezado-detalles span
+{
+font-weight:bold;
+}
+
+.login
+{
+	background-image: url(../images/fondo-login.jpg);
+	background-repeat: no-repeat;
+	text-align: left;
+	height: 309px;
+	width: 410px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.txtLogin
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.txtLoginError
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FF0000;
+}
+
+.input-numero
+{
+    text-align: right;
+}
+
+.textBoxNote
+{
+    color: #999;
+    font-size: 12px;
+    
+}
+
+.configuration_title
+{
+    margin: 10px 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.div-reportes
+{
+	text-align:left;	
+	vertical-align:middle;
+	font-size: 12px;
+	font-weight:bold;
+	margin-top:20px;
+	width: 50%; 
+	margin: 0px auto 0px auto;
+	border: solid 1px #d0d0d0;
+	background-color: #f9f9f9;
+}
+
+.div-reportes ul
+{
+	line-height:30px;
+	margin-top:50px;
+}
+
+.div-reportes ul li
+{
+	padding-left:10px;
+}
+
+.div-reportes a
+{
+	text-decoration:none;
+}
+
+.div-reportes a:hover  
+{
+    color:Black;
+}
+
+
+ul.reporte
+{
+	list-style-image: url(../images/report.gif); 
+}
+
+
+/*** adding sf-vertical in addition to sf-menu creates a vertical menu ***/
+.sf-vertical, .sf-vertical li {
+	width:	182px;
+	height: 30px;
+}
+/* this lacks ul at the start of the selector, so the styles from the main CSS file override it where needed */
+.sf-vertical li:hover ul,
+.sf-vertical li.sfHover ul {
+	left:	182px; /* match ul width */
+	top:	0;
+}
+
+/*** alter arrow directions ***/
+.sf-vertical .sf-sub-indicator { background-position: -10px 0; } /* IE6 gets solid image only */
+.sf-vertical a > .sf-sub-indicator { background-position: 0 0; } /* use translucent arrow for modern browsers*/
+
+/* hover arrow direction for modern browsers*/
+.sf-vertical a:focus > .sf-sub-indicator,
+.sf-vertical a:hover > .sf-sub-indicator,
+.sf-vertical a:active > .sf-sub-indicator,
+.sf-vertical li:hover > a > .sf-sub-indicator,
+.sf-vertical li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+
+/*FIX*/
+.ajax__calendar_container table td 
+{
+    padding:0;

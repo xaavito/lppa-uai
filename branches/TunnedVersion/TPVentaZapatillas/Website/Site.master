@@ -1,0 +1,126 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Site.Master.vb" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<!--llamadas a hojas de estilo-->
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Administracion.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Login.css" rel="stylesheet" type="text/css" />
+<!--llamadas a funciones Javascript-->
+    <script src="Scripts/Master.js" type="text/javascript"></script>
+    <title>Venta de Zapatillas</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="scmMaster" runat="server">
+    </asp:ScriptManager>
+    <div style="width: 100.5%; float: left; height: 30px; background: #ece8da url(images/ui-bg_highlight-soft_75_ece8da_1x100.png) 50% 50% repeat-x;">
+        <div id="divLnkInicio" style="float: left; padding: 4px 1em 0 2em;">
+            <asp:LinkButton ID="LnkInicio" runat="server" Text="Inicio" OnClick="LnkInicio_Click"
+                CssClass="menu"></asp:LinkButton>
+        </div>
+        <div id="divLnkProductos" style="float: left; padding: 4px 1em 0 2em;">
+            <asp:LinkButton ID="LnkProducto" runat="server" Text="Productos" CssClass="menu"
+                OnClick="LnkProducto_Click"></asp:LinkButton>
+        </div>
+        <div id="divLnkAdmUsuarios" style="float: left; padding: 4px 1em 0 1em">
+            <asp:LinkButton ID="lnkAdminstracion" runat="server" Text="Administracion" CssClass="menu"
+                OnClick="lnkAdmUsuarios_Click"></asp:LinkButton>
+        </div>
+        <div id="divLnkAdmProductos" style="float: left; padding: 4px 1em 0 2em;">
+            <asp:LinkButton ID="LnkAbmProductos" runat="server" Text="ABM Productos"
+                CssClass="menu" OnClick="lnkAdmProductos_Click"></asp:LinkButton>
+        </div>
+       
+        <div id="divLnkSalir" class="button" style="float: right; padding: 4px 4px 0 0;">
+           <asp:Label style="margin:12px;" ID="LblUsr" runat="server" Text="Bienvenido Invitado!"></asp:Label>
+            <asp:LinkButton ID="lnkSalir" runat="server" Text="Cerrar Sesion" CssClass="arial12negro"
+                OnClick="lnkSalir_Click"></asp:LinkButton>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar1">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <div id="divLogin">
+                    <div style="margin-left: 8px; width: 178px; float: left; height: 20px;" align="left">
+                        <asp:Label ID="LblAreaUsuarios" runat="server" Text="Usuarios Registrados" CssClass="arial12verdebold"></asp:Label>
+                        <br />
+                        <br />
+                    </div>
+                    <div style="width: 185px; height: 192px;">
+                        <div class="contenidologin" style="width: 176px; height: 163px">
+                            <div style="margin-left: 8px; width: 178px; float: left; height: 20px;" align="left">
+                                <div style="width: 25%; float: left">
+                                    <asp:Label ID="lblUsuario" runat="server" Text="Usuario" CssClass="arial12verdebold"></asp:Label>
+                                </div>
+                            </div>
+                            <div style="margin-left: 8px;">
+                                <asp:TextBox ID="txtUsuario" runat="server" CssClass="arial12negrobold" Width="140px"></asp:TextBox>
+                            </div>
+                            <div style="margin-left: 8px; width: 300px; float: left;" align="left">
+                                <div style="width: 25%; float: left">
+                                    <asp:Label ID="lblContrasenia" runat="server" Text="Contraseña" CssClass="arial12verdebold"></asp:Label>
+                                </div>
+                            </div>
+                            <div style="margin-left: 8px;">
+                                <asp:TextBox ID="txtContrasenia" runat="server" TextMode="Password" Width="140px"></asp:TextBox>
+                                <br />
+                            </div>
+                            <div>
+                                <br />
+                            </div>
+                            <div style="margin-left: 8px; width: 80px; float: left;">
+                                <div id="divBtnIngresar" style="width: 69px">
+                                    <asp:Button ID="btnIngresar" runat="server" OnClientClick="return ValidarLogin();"
+                                        Text="Ingresar" OnClick="btnIngresar_Click" />
+                                </div>
+                            </div>
+                            <div>
+                                <br />
+                            </div>
+                            <div style="color: red; font-family:Arial Black; font-size: 12px; padding: 1em 0 1em 0" align="center">
+                                <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </asp:ContentPlaceHolder>
+            <ul id="sample-menu-3">
+              <li id="liUsuarios" runat="server">
+                    <div id="divLinkUsuarios">
+                        <asp:LinkButton ID="LnkUsuarios" runat="server" Text="Usuarios" CssClass="menu" OnClick="LnkUsuarios_Click"></asp:LinkButton>
+                    </div>
+                </li>
+                <li id="liPermisos" runat="server">
+                    <div id="divLinkPermisos">
+                        <asp:LinkButton ID="LnkPermisos" runat="server" Text="Permisos" CssClass="menu" OnClick="LnkPermisos_Click"></asp:LinkButton>
+                    </div>
+                </li>
+                <li id="liBitacora" runat="server">
+                    <div id="divLinkBitacora">
+                        <asp:LinkButton ID="LinkBitacora" runat="server" Text="Bitacora" CssClass="menu"
+                            OnClick="lnkBitacora_Click"></asp:LinkButton>
+                    </div>
+                </li>
+                <li id="liBackupRestored" runat="server">
+                    <div id="divBackupRestored">
+                        <asp:LinkButton ID="lnkBackupRestored" runat="server" Text="BackUpRestored" CssClass="menu"
+                            OnClick="lnkBackupRestored_Click"></asp:LinkButton>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div style="float: right; width: 820px; padding-bottom: 10px; background-repeat: no-repeat;
+            padding-top: 55px; height: 74px">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <asp:HiddenField ID="hdnPermisosUsr" runat="server" />
+    <asp:HiddenField ID="hdnPaginaActual" runat="server" />
+    </form>
+</body>
+</html>

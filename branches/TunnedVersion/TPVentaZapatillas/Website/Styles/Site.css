@@ -1,0 +1,251 @@
+﻿body
+{
+	font-family: Arial, Times New Roman, Tahoma;
+}
+
+.header
+{
+	color: White;
+	font-weight: bold;
+	background: #439172 url(../JQuery/jquery-ui-1.8.7.custom/css/custom-theme/images/ui-bg_glass_75_015531_1x400.png) 50% 50% repeat-x;
+	height: 30px;
+}
+
+.invisible
+{
+	display: none;
+}
+
+.contenidologin
+{
+	float: left;
+}
+
+.arial12blanco
+{
+	font-family: Arial, Times New Roman, Tahoma;
+	font-size: 12px;
+	color: White;
+}
+
+.arial12negro
+{
+	font-family: Arial, Times New Roman, Tahoma;
+	font-size: 12px;
+	color: Black;
+}
+
+.arial12negrobold
+{
+	font-family: Arial, Times New Roman, Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: Black;
+}
+
+.arial12verdebold
+{
+	font-family: Arial, Times New Roman, Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #015531;
+}
+
+.mensajeBase, .info, .exito, .alerta, .error
+{
+	top: 75%;
+	left: 1%;
+	font-family: Arial, Times New Roman, Tahoma;
+	font-weight: bold;
+	font-size: 13px; /*border: 1px solid; Comentado para que no se vea el borde con JQuery rounded*/
+	margin: 10px 0px;
+	padding: 15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	position: fixed;
+	display: none;
+}
+.mensajeBase
+{
+	color: #0B6138;
+	width: 400px;
+	background-color: #CEF6CE;
+}
+.info
+{
+	color: #00529B;
+	width: 400px;
+	background-color: #BDE5F8;
+	background-image: url(../Images/info.png);
+}
+.exito
+{
+	color: #4F8A10;
+	width: 400px;
+	background-color: #DFF2BF;
+	background-image: url(../Images/accept.png);
+}
+.alerta
+{
+	color: #9F6000;
+	width: 400px;
+	background-color: #FEEFB3;
+	background-image: url(../Images/warning.png);
+}
+.error
+{
+	color: #D8000C;
+	width: 400px;
+	background-color: #FFBABA;
+	background-image: url(../Images/remove.png);
+}
+
+.divLabel
+{
+	padding: 0 2em 1em 0;
+	float: left;
+	width: 15%;
+}
+
+.ModalProgressContent
+{
+	padding: 10px;
+	border: solid 0px #000040;
+	font-weight: bold;
+	background-color: #ffffff;
+	margin-top: 300px;
+}
+
+.invisible
+{
+	display: none;
+}
+
+/*Paginado*/
+
+#tablePagination
+{
+	font-weight: bold;
+	background-color: #F5F3E5;
+	font-size: 0.9em;
+	padding: 2px 0px;
+	height: 25px;
+}
+#tablePagination_paginater
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+#tablePagination img
+{
+	padding: 0px 5px;
+}
+#tablePagination_perPage
+{
+	float: left;
+}
+#tablePagination_paginater
+{
+	float: right;
+}
+
+/*Selección de filas en grillas*/
+.contenidofila
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #FFFFFF;
+	border-right-width: 0px;
+	border-right-style: none;
+	text-align: center;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #BDCFD7;
+	text-decoration: none;
+}
+.contenidofila:hover
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: normal;
+	color: #980D37;
+	background-color: #C6E1FE;
+	border-right-width: 0px;
+	border-right-style: none;
+	text-align: center;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #BDCFD7;
+	text-decoration: none;
+}
+.contenidofilahover
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #85BEA9;
+	border-right-width: 0px;
+	border-right-style: none;
+	text-align: center;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #BDCFD7;
+	padding: 0px;
+	margin: 0px;
+	float: none;
+	clear: none;
+	top: 0px;
+	bottom: 0px;
+	clip: rect(auto,auto,0px,auto);
+	width: 0px;
+}
+
+/*---------------------------------------------------*/
+/*Menu (MasterPage)*/
+
+.menu
+{
+	position: relative;
+	font-family: Arial Times New Roman Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #015531;
+	text-decoration: none;
+	overflow: hidden;
+}
+.menu:hover
+{
+	border: 1px solid #015531;
+	color: #fff;
+	background: #439172 url(../JQuery/jquery-ui-1.8.7.custom/css/custom-theme/images/ui-bg_glass_75_015531_1x400.png) 50% 50% repeat-x;
+	height: 22px;
+}
+
+/*---------------------------------------------------*/
+/*Table sorter*/
+
+.tablesorter .header
+{
+	background-image: url(../Images/header-both.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	border-right: 1px solid #000;
+	border-top: 1px solid #FFF;
+	padding-top: 6px;
+	padding-left: 3px;
+	padding-bottom: 6px;
+	height: auto;
+}
+.tablesorter .headerSortUp
+{
+	background-image: url(../Images/header-asc.gif);
+	background-repeat: no-repeat;
+}
+.tablesorter .headerSortDown
+{
+	background-image: url(../Images/header-desc.gif);
+	background-repeat: no-repeat;
+}
