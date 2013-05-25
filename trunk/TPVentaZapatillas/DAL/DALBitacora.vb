@@ -10,13 +10,15 @@
         Dim bit As New BE.BEBitacora
         Try
             If usr Is Nothing Then
-                bit.usr = "--"
                 ht.Add("@IdUsuario", Nothing)
+                bit.idUsr = 0
             Else
                 ht.Add("@IdUsuario", usr.IdUsuario)
-                bit.usr = usr.Nombre + " " + usr.Apellido
+                bit.idUsr = usr.IdUsuario
+                'bit.usr = usr.Nombre + " " + usr.Apellido
             End If
-
+            bit.fecha = DateTime.Now.Date
+            ht.Add("@Fecha", bit.fecha)
             ht.Add("@Mensaje", mensaje)
             bit.evento = mensaje
             ht.Add("@ParamSalidaId", 0)
@@ -27,8 +29,8 @@
                     bit.id = ParamSalida
                 Else
                 End If
-                TexttoACalcular = DaoDv.ConcatenarValoresPropiedades(bit)
-                DaoDv.AlmacenarDVH("Bitacora", "id", bit.id, DaoDv.CalcularDVH(TexttoACalcular))
+                TexttoACalcular = bit.id.ToString + bit.idUsr.ToString + bit.evento + bit.fecha.ToString("MM/dd/yyyy hh:mm:ss")
+                DaoDv.AlmacenarDVH("Bitacora", "PK_bcraID", bit.id, DaoDv.CalcularDVH(TexttoACalcular))
                 DaoDv.AlmacenarDVV("Bitacora")
             End If
         Catch ex As Exception
