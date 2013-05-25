@@ -25,29 +25,6 @@ Partial Class Bitacora
         Dim Ej2 As PermisoEjemplo
         Dim Ej3 As PermisoEjemplo
 
-
-        'For Each p As BE.BEBitacora In ListaEjemplo
-
-        'Next
-        'Ej = New PermisoEjemplo
-        'Ej.Evento = "Ingreso al sistema"
-        'Ej.Fecha = "10/03/2013"
-        'Ej.usuario = "Adrian Scarinci"
-        'ListaEjemplo.Add(Ej)
-
-
-        'Ej2 = New PermisoEjemplo
-        'Ej.Evento = "Ingreso al sistema"
-        'Ej.Fecha = "10/03/2013"
-        'Ej.usuario = "Gonzalo Dominguez"
-        'ListaEjemplo.Add(Ej2)
-
-        'Ej3 = New PermisoEjemplo
-        'Ej3.Evento = "Ingreso al sistema"
-        'Ej3.Fecha = "10/03/2013"
-        'Ej3.usuario = "Dario Garcia"
-        'ListaEjemplo.Add(Ej3)
-
         gvBitacora.DataSource = ListaEjemplo
         gvBitacora.DataBind()
     End Sub

@@ -23,7 +23,6 @@ Public Class BD
             If (Not mTr Is Nothing) Then 'Pregunto si estoy en una transaccion
                 MCommand.Transaction = mTr
             End If
-            '  SqlCommandBuilder.DeriveParameters(MCommand)
             For Each param In UnHashTable
                 MCommand.Parameters.AddWithValue(param.Key, param.Value)
             Next
