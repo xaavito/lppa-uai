@@ -171,7 +171,9 @@
     <Content Include="BD\GastaSuelaV3.sql">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="BD\GastaSuelaV4.sql" />
+    <Content Include="BD\GastaSuelaV4.sql">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
