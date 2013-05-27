@@ -51,6 +51,12 @@ Public Class DALUsuario
                     Per.LinkPermiso = row("LinkPermiso")
                     List.Add(Per)
                 Next
+            Else
+                Per = New BEPermiso
+                Per.IdPermiso = 0
+                Per.NombrePermiso = "Venta Productos"
+                Per.LinkPermiso = "divLnkProductos"
+                List.Add(Per)
             End If
         Catch ex As Exception
             'registrar en bitacora
