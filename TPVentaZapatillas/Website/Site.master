@@ -81,6 +81,11 @@
                             <div>
                                 <br />
                             </div>
+                            <div  style="margin-left: 8px; width: 300px; float: left;" align="left">
+                                <div style="width: 100%; float: left">
+                                    <asp:LinkButton ID="lnkOlvido" runat="server" Text="¿Olvido su clave?" CssClass="arial12negro" OnClientClick="location.href='mailto:gastasuela@gmail.com?subject=Olvide mi clave';"></asp:LinkButton>
+                                </div>
+                            </div>
                             <div style="color: red; font-family:Arial Black; font-size: 12px; padding: 1em 0 1em 0" align="center">
                                 <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
                             </div>
