@@ -31,7 +31,7 @@
                 End If
                 TexttoACalcular = bit.id.ToString + bit.idUsr.ToString + bit.evento + bit.fecha.ToString("MM/dd/yyyy hh:mm:ss")
                 DaoDv.AlmacenarDVH("Bitacora", "PK_bcraID", bit.id, DaoDv.CalcularDVH(TexttoACalcular))
-                DaoDv.AlmacenarDVV("Bitacora")
+                'DaoDv.AlmacenarDVV("Bitacora")
             End If
         Catch ex As Exception
             result = False

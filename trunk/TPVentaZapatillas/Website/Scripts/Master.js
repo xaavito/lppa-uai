@@ -79,7 +79,11 @@ function CargarDivsPermisos() {
     }
 
     //Se desahibiltan los links pertenecientes a administracion para que no se solapen y se habiliten cuando es en 
-    if (hdnPaginaActual.value != "Adminstracion.aspx") {
+    if (hdnPaginaActual.value != "Adminstracion.aspx" &&
+            hdnPaginaActual.value != "Usuarios.aspx" &&
+            hdnPaginaActual.value != "BackupRestored.aspx" &&
+            hdnPaginaActual.value != "Bitacora.aspx" &&
+            hdnPaginaActual.value != "Permisos.aspx") {
         DeshabilitarLink("divLinkPermisos");
         DeshabilitarLink("divLinkBitacora");
         DeshabilitarLink("divBackupRestored");
