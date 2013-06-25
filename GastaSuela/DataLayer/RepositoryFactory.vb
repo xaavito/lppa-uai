@@ -1,6 +1,6 @@
 ﻿'TODO: Patron Factory
 Public Class RepositoryFactory
-    Private Shared _connectionstring As String
+    Private Shared _connectionstring As String = System.Configuration.ConfigurationManager.AppSettings("connectionString")
     Private Shared _repository As IRepository
 
     Public Shared Function Create() As IRepository
