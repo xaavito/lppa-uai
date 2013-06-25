@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="PresentacionWeb.Site" %>
 
+<%@ Import Namespace="Negocio" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head runat="server">
@@ -15,7 +17,7 @@
         <div class="header">
             <div class="title">
                 <h1>
-                    Mi aplicación ASP.NET
+                    Venta de Zapatillas
                 </h1>
             </div>
             <div class="loginDisplay">
@@ -24,7 +26,7 @@
                         [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Iniciar sesión</a> ]
                     </AnonymousTemplate>
                     <LoggedInTemplate>
-                        Pantalla de bienvenida <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        Bienvenido <span class="bold" id="UserName" runat="server"><%'=Current.Usuario.ToString%></span>!
                         [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/"/> ]
                     </LoggedInTemplate>
                 </asp:LoginView>
@@ -32,8 +34,10 @@
             <div class="clear hideSkiplink">
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Página principal"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Acerca de"/>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Inicio"/>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Productos"/>
+                        <asp:MenuItem NavigateUrl="~/Administracion.aspx" Text="Administracion"/>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Productos"/>
                     </Items>
                 </asp:Menu>
             </div>

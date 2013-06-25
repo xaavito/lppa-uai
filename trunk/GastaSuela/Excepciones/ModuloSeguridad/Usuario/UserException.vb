@@ -2,7 +2,7 @@
     Inherits CustomException
 
     Public Sub New()
-        MyBase.New("ModUsuario", "ExU001", "El usuario no existe.", Windows.Forms.MessageBoxIcon.Exclamation)
+        MyBase.New("ModUsuario", "ExU001", "El usuario y/o password no es valido.", Windows.Forms.MessageBoxIcon.Exclamation)
     End Sub
 
 End Class

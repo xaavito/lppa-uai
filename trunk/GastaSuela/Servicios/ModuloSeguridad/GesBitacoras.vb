@@ -6,10 +6,14 @@ Public Class GesBitacoras
     Public Shared Sub Guardar(bitacora As Bitacora)
         Dim repository As IRepository = RepositoryFactory.Create()
         Try
+            Dim usuID As Int32 = Nothing
+            If Not bitacora.Usuario Is Nothing Then
+                usuID = bitacora.Usuario.OID
+            End If
             repository.Nombre = "BITACORAS_PROC"
             repository.AddParameter("@ACCION", bitacora.Persistencia)
             repository.AddParameter("@ID", bitacora.OID)
-            repository.AddParameter("@IDUSUARIO", bitacora.Usuario.OID)
+            repository.AddParameter("@IDUSUARIO", usuID)
             repository.AddParameter("@MODULO", bitacora.Modulo)
             repository.AddParameter("@DESCRIPCION", bitacora.Descripcion)
             repository.AddParameter("@ARGUMENTOS", String.Join(";", bitacora.Argumentos))

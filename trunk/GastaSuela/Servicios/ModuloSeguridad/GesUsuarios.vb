@@ -15,9 +15,6 @@ Public Class GesUsuarios
             repository.Nombre = "USUARIOS_SP"
             repository.AddParameter("@ACCION", "byNICK")
             repository.AddParameter("@ID", Nothing)
-            repository.AddParameter("@NOMBRE", Nothing)
-            repository.AddParameter("@APELLIDO", Nothing)
-            repository.AddParameter("@EMAIL", Nothing)
             repository.AddParameter("@NICK", nick)
             Dim dtUser As DataTable = repository.ExecuteDataTable()
 

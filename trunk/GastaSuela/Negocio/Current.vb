@@ -1,13 +1,18 @@
-﻿Public Class Current
+﻿Imports System.Web
+
+Public Class Current
 
     Private Shared user As Usuario
 
     Public Shared Property Usuario() As Usuario
         Get
-            Return user
+            If Not HttpContext.Current.Session("Usuario") Is Nothing Then
+                Return DirectCast(HttpContext.Current.Session("Usuario"), Usuario)
+            End If
+            Return Nothing
         End Get
         Set(ByVal value As Usuario)
-            user = value
+            HttpContext.Current.Session("Usuario") = value
         End Set
     End Property
 
