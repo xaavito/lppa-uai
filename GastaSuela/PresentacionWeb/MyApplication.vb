@@ -11,31 +11,31 @@ Namespace My
         ''' </summary>
         ''' <param name="ex">Exception ocurrida</param>
         ''' <remarks></remarks>
-        Public Sub HandlerException(page As System.Web.UI.Page, ex As Exception)
+        Public Sub HandlerException(page As System.Web.UI.Page, ex As Exception, ValidationGroup As String)
 
             If TypeOf ex Is CustomException Then
                 Dim cex As CustomException = DirectCast(ex, CustomException)
 
                 GesBitacoras.Guardar(cex.Modulo, "({0}) {1}", New String() {cex.Code, cex.Message})
 
-                'Response.Write(String.Format("{0}", cex.Message))
-                'Response.End()
+                If cex.Type = Windows.Forms.MessageBoxIcon.Error Then
+                    Response.Write("Ocurrió un error crítico en la aplicación. <br/><br/>" + cex.Message)
+                    Response.End()
+                Else
+                    If Not ValidationGroup Is Nothing Then
+                        Dim validator As CustomValidator = New CustomValidator()
+                        validator.IsValid = False
+                        validator.ErrorMessage = ex.Message
+                        validator.ValidationGroup = ValidationGroup
+                        Page.Validators.Add(validator)
+                    Else
+                        ScriptManager.RegisterStartupScript(page, page.GetType(), "Mensaje", "alert('" + String.Format("{0}", cex.Message) + "');", True)
+                    End If
+                End If
 
-                'Dim cstype As Type = Me.[GetType]()
-
-                'Page.ClientScript.RegisterStartupScript( me.gettype(), "PopupScript", alertScript );
-
-
-                ScriptManager.RegisterStartupScript(page, page.GetType(), "Mensaje", "alert('" + String.Format("{0}", cex.Message) + "');", True)
-
-                'If cex.Type = MessageBoxIcon.Error Then
-                'MsgBox("Ocurrió un error crítico en la aplicación, la misma se cerrará", MsgBoxStyle.Critical)
-                'System.Environment.Exit(1)
-                'End If
             Else
-
-                'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "Mensaje", "alert('Ocurrió un error no controlado en la aplicación');", True)
-
+                Response.Write("Ocurrió un error no controlado en la aplicación")
+                Response.End()
             End If
         End Sub
 

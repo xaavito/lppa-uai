@@ -64,5 +64,8 @@ Public Class Usuario
             _perfil = value
         End Set
     End Property
+    Public Overrides Function ToString() As String
+        Return Me.Apellido + ", " + Me.Nombre
+    End Function
 
 End Class
