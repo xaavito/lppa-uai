@@ -5,7 +5,7 @@ Public Class Login
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        RegisterHyperLink.NavigateUrl = "Register.aspx?ReturnUrl=" + HttpUtility.UrlEncode(Request.QueryString("ReturnUrl"))
+        'RegisterHyperLink.NavigateUrl = "Register.aspx?ReturnUrl=" + HttpUtility.UrlEncode(Request.QueryString("ReturnUrl"))
     End Sub
 
 
@@ -13,10 +13,16 @@ Public Class Login
     Protected Sub LoginButton_Click(sender As Object, e As EventArgs)
 
         Try
+            'Verifica el usuario y password ingresados
             Seguridad.Seguridad.Login(Me.UserName.Text, Me.Password.Text)
-            Current.Usuario = Servicios.GesUsuarios.Obtener(Me.UserName.Text)
-            Dim Userroles As String = "Administrador"
 
+            'Carga el usuario logueado en memoria
+            Current.Usuario = Servicios.GesUsuarios.Obtener(Me.UserName.Text)
+
+            'Obtiene el perfil del usuario logueado
+            Dim Userroles As String = Current.Usuario.Perfil.Nombre
+
+            'Persiste en una cookie los datos del usuario
             Dim ticket As FormsAuthenticationTicket = New FormsAuthenticationTicket(
                     1,
                     Current.Usuario.Nick,
@@ -28,19 +34,13 @@ Public Class Login
 
 
             Dim hash As String = FormsAuthentication.Encrypt(ticket)
-            Dim cookie As HttpCookie = New HttpCookie(
-               FormsAuthentication.FormsCookieName,
-               hash)
+            Dim cookie As HttpCookie = New HttpCookie(FormsAuthentication.FormsCookieName, hash)
             Response.Cookies.Add(cookie)
 
-            'FormsAuthentication.SetAuthCookie(Current.Usuario.Nick, False)
-
-            Dim roles As String() = ticket.UserData.Split(New Char() {"|"})
-            Dim id As IIdentity = New FormsIdentity(ticket)
-            Dim principal As IPrincipal = New GenericPrincipal(id, roles)
-            Context.User = principal
-
-
+            'Redirecciona a la pagina a la que se intentó ingresar
+            If Not String.IsNullOrEmpty(Request.QueryString("ReturnUrl")) Then
+                Response.Redirect(Request.QueryString("ReturnUrl").ToString)
+            End If
             Response.Redirect("~/")
 
         Catch ex As Exception

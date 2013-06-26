@@ -9,7 +9,6 @@
     </h2>
     <p>
         Especifique su nombre de usuario y contraseña.
-        <asp:HyperLink ID="RegisterHyperLink" runat="server" EnableViewState="false">Registrarse</asp:HyperLink> si no tiene una cuenta.
     </p>
 
         <LayoutTemplate>
