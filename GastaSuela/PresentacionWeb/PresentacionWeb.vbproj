@@ -98,11 +98,35 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Administracion.aspx" />
+    <Content Include="BackupRestore.aspx" />
+    <Content Include="bin\DataLayer.dll" />
+    <Content Include="bin\DataLayer.pdb" />
+    <Content Include="bin\DataLayer.xml" />
+    <Content Include="bin\Excepciones.dll" />
+    <Content Include="bin\Excepciones.pdb" />
+    <Content Include="bin\Excepciones.xml" />
+    <Content Include="bin\Negocio.dll" />
+    <Content Include="bin\Negocio.pdb" />
+    <Content Include="bin\Negocio.xml" />
+    <Content Include="bin\PresentacionWeb.dll" />
+    <Content Include="bin\PresentacionWeb.pdb" />
+    <Content Include="bin\PresentacionWeb.xml" />
+    <Content Include="bin\Seguridad.dll" />
+    <Content Include="bin\Seguridad.pdb" />
+    <Content Include="bin\Seguridad.xml" />
+    <Content Include="bin\Servicios.dll" />
+    <Content Include="bin\Servicios.pdb" />
+    <Content Include="bin\Servicios.xml" />
+    <Content Include="bin\Utilidades.dll" />
+    <Content Include="bin\Utilidades.pdb" />
+    <Content Include="bin\Utilidades.xml" />
+    <Content Include="Bitacora.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Gasta Suela.jpg" />
     <Content Include="Images\pixel.gif" />
     <Content Include="Images\top-menu-left.jpg" />
     <Content Include="Message.aspx" />
+    <Content Include="Productos.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -162,6 +186,20 @@
       <DependentUpon>Administracion.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="BackupRestore.aspx.designer.vb">
+      <DependentUpon>BackupRestore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackupRestore.aspx.vb">
+      <DependentUpon>BackupRestore.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Bitacora.aspx.designer.vb">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bitacora.aspx.vb">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -196,6 +234,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="MyApplication.vb" />
+    <Compile Include="Productos.aspx.designer.vb">
+      <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.aspx.vb">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>

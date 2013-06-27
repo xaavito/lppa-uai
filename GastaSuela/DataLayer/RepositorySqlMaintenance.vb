@@ -23,20 +23,6 @@ Public Class RepositorySqlMaintenance
         bk.LogTruncation = BackupTruncateLogType.Truncate
         bk.SqlBackup(sqlServer)
 
-        'Dim builder As New SqlConnectionStringBuilder(connectionString)
-
-        'Dim sql As String = "   BACKUP DATABASE [" + builder.InitialCatalog + "] TO  " & vbCrLf & _
-        '        "	DISK = N'" & path & "' " & vbCrLf & _
-        '        "	WITH NOFORMAT, NOINIT,  NAME = N'" + builder.InitialCatalog + "', " & vbCrLf & _
-        '        "	SKIP, NOREWIND, NOUNLOAD,  STATS = 10"
-
-
-        'Dim Conn As SqlConnection = New SqlConnection(connectionString)
-        'Conn.Open()
-        'Dim cmd As New SqlCommand(sql, Conn)
-        'cmd.ExecuteNonQuery()
-        'Conn.Close()
-
     End Sub
 
     Public Sub Restore(path As String, connectionString As String)
@@ -54,19 +40,6 @@ Public Class RepositorySqlMaintenance
         sqlServer.KillAllProcesses(builder.InitialCatalog)
         rs.Wait()
         rs.SqlRestore(sqlServer)
-
-        'Dim builder As New SqlConnectionStringBuilder(connectionString)
-
-        'Dim sql = "USE master;" _
-        '& "ALTER DATABASE [" + builder.InitialCatalog + "] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;" _
-        '& "RESTORE DATABASE [" + builder.InitialCatalog + "] FROM DISK = '" & path & "' with replace ;" _
-        '& "ALTER DATABASE [" + builder.InitialCatalog + "] SET MULTI_USER;"
-
-        'Dim Conn As SqlConnection = New SqlConnection(connectionString)
-        'Conn.Open()
-        'Dim cmd As New SqlCommand(sql, Conn)
-        'cmd.ExecuteNonQuery()
-        'Conn.Close()
 
     End Sub
 
