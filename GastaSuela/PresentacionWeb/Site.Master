@@ -31,25 +31,39 @@
                     </LoggedInTemplate>
                 </asp:LoginView>
             </div>
-            <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Inicio"/>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Productos"/>
-                        <asp:MenuItem NavigateUrl="~/Administracion.aspx" Text="Administracion"/>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Productos"/>
-                    </Items>
-                </asp:Menu>
+
+
+        <div class="clear hideSkiplink" style="height:50px; vertical-align:bottom" >
+            <a href="#MenuPrincipal_SkipLink"><img alt="Omitir vínculos de navegación" src="/Images/pixel.gif" width="0" height="0" style="border-width:0px;"></a>
+            <div class="menu" id="MenuPrincipal" style="float: left;" runat="server">
+	            <ul runat="server" class="level1 static" tabindex="0" role="menubar" style="position: relative; width: auto; float: left;">
+		            <li runat="server" role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Default.aspx" tabindex="-1">Inicio</a></li>
+                    <li runat="server" role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Default.aspx" tabindex="-1">Productos</a></li>
+                    <li visible="false" id="lnkAdministracion" runat="server" role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Administracion.aspx" tabindex="-1">Administracion</a></li>
+                    <li runat="server" role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Default.aspx" tabindex="-1">Productos</a></li>
+	            </ul>
             </div>
         </div>
-        <div class="main">
+
+        </div>
+    <div class="container">
+        <div class="sidebar1">
+            <div class="menu" id="NavigationMenuAdm" runat="server">
+	            <ul class="level1">
+		            <li runat="server" id="lnkUsuarios" visible="False"><a class="level1" href="/Usuarios.aspx">Usuarios</a></li>
+                    <li runat="server" id="lnkProductos" runat="server"><a class="level1" href="/Default.aspx">Productos</a></li>
+                    <li runat="server" id="lnkBitacora" runat="server"><a class="level1" href="/Administracion.aspx">Bitacora</a></li>
+                    <li runat="server" id="lnkBackUp" runat="server"><a class="level1" href="/Default.aspx">BackUp / Restore</a></li>
+	            </ul>
+            </div>
+        </div>
+    
+        <!--<div class="main">-->
+        <div style="float: right; width: 820px; padding-bottom: 10px; background-repeat: no-repeat;padding-top: 20px; height: 74px">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
         </div>
-        <div class="clear">
-        </div>
     </div>
-    <div class="footer">
-        
+
     </div>
     </form>
 </body>

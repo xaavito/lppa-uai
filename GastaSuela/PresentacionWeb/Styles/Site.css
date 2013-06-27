@@ -1,6 +1,20 @@
 ﻿/* DEFAULTS
 ----------------------------------------------------------*/
-
+.container
+{
+	width: 1010px;
+    height: 500px;
+}
+.sidebar1
+{
+	float: left;
+	width: 180px;
+	background-image: url('/Images/top-menu-left.jpg');
+	background-repeat:repeat-y;
+	padding-top: 20px;
+	height: 480px;
+    
+}
 body   
 {
     background: #b6b7bc;
@@ -158,13 +172,13 @@ div.menu ul
     list-style: none;
     margin: 0px;
     padding: 0px;
-    width: auto;
+    width: 150px;
 }
 
 div.menu ul li a, div.menu ul li a:visited
 {
-    background-color: #465c71;
-    border: 1px #4e667d solid;
+    background-color: rgb(70, 117, 39);/*#465c71;*/
+    border: 1px rgb(26, 70, 15) solid;/*1px #4e667d solid;*/
     color: #dde4ec;
     display: block;
     line-height: 1.35em;
