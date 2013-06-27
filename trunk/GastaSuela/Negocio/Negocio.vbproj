@@ -78,10 +78,6 @@
     <Compile Include="IPrototype.vb" />
     <Compile Include="ModuloSeguridad\Backup.vb" />
     <Compile Include="ModuloSeguridad\Bitacora.vb" />
-    <Compile Include="ModuloSeguridad\Idioma\Contenedor.vb" />
-    <Compile Include="ModuloSeguridad\Idioma\Control.vb" />
-    <Compile Include="ModuloSeguridad\Idioma\Mensaje.vb" />
-    <Compile Include="ModuloSeguridad\Idioma\Idioma.vb" />
     <Compile Include="ModuloSeguridad\Modulo.vb" />
     <Compile Include="ModuloSeguridad\ModuloAccion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

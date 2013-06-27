@@ -6,11 +6,5 @@
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
         ADMINISTRACION
-    </h2>
-    <p>
-        MODULO DE ADMINISTRACION
-    </p>
-
-
-    
+    </h2>   
 </asp:Content>
