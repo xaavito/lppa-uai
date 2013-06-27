@@ -19,6 +19,9 @@ Public Class Login
             'Carga el usuario logueado en memoria
             Current.Usuario = Servicios.GesUsuarios.Obtener(Me.UserName.Text)
 
+            'Carga los permisos del usuario
+            Servicios.GesPermisos.CargarPermisos(Current.Usuario.Perfil)
+
             'Obtiene el perfil del usuario logueado
             Dim Userroles As String = Current.Usuario.Perfil.Nombre
 
@@ -39,11 +42,12 @@ Public Class Login
 
             'Redirecciona a la pagina a la que se intentó ingresar
             If Not String.IsNullOrEmpty(Request.QueryString("ReturnUrl")) Then
-                Response.Redirect(Request.QueryString("ReturnUrl").ToString)
+                Response.Redirect(Request.QueryString("ReturnUrl").ToString, False)
             End If
-            Response.Redirect("~/")
+            Response.Redirect("~/", False)
 
         Catch ex As Exception
+            'TODO: Verificar 3 intentos
             My.Application.HandlerException(Me, ex, "LoginUserValidationGroup")
         End Try
 

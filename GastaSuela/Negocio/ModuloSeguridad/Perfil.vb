@@ -43,7 +43,7 @@
             For Each modu As Modulo In _modulos
                 If modulo.Codigo = modu.Codigo Then Return modu.Permitido
             Next
-            Return False
+            Return True
         End If
 
         If accion <> String.Empty Then
