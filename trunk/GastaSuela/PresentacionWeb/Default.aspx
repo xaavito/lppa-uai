@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="Página principal" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false"
     CodeBehind="Default.aspx.vb" Inherits="PresentacionWeb._Default" %>
 
+<%@ Import Namespace="Negocio" %>
+
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
@@ -17,4 +19,6 @@
     <%=Context.User.Identity.Name%>
     <br />
     <%=Context.User.IsInRole("Administrador").ToString%>
+
+    
 </asp:Content>

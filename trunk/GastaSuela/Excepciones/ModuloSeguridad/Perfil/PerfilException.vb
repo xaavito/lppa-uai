@@ -2,7 +2,7 @@
     Inherits CustomException
 
     Public Sub New()
-        MyBase.New("ModPerfil", "ExPF001", "No tiene acceso al módulo ingresado", Windows.Forms.MessageBoxIcon.Information)
+        MyBase.New("ModPerfil", "ExPF001", "No tiene acceso al módulo ingresado", Windows.Forms.MessageBoxIcon.Error)
     End Sub
 
     Public Sub New(modulo As String)
