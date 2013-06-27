@@ -52,11 +52,13 @@
     <div class="container">
         <div class="sidebar1">
             <div class="menu" id="NavigationMenuAdm" runat="server">
-	            <ul class="level1">
+	            <ul class="level1">                    
 		            <li runat="server" id="lnkUsuarios" visible="False"><a class="level1" href="/Usuarios.aspx">Usuarios</a></li>
-                    <!--<li runat="server" id="lnkProductos" visible="False" runat="server"><a class="level1" href="/AdmProductos.aspx">Adm. Productos</a></li>-->
-                    <li runat="server" id="lnkBitacora" visible="False" runat="server"><a class="level1" href="/Bitacora.aspx">Bitacora</a></li>
-                    <li runat="server" id="lnkBackUp" visible="False" runat="server"><a class="level1" href="/BackupRestore.aspx">BackUp / Restore</a></li>
+                    <li runat="server" id="lnkPermisos" visible="False"><a class="level1" href="/Permisos.aspx">Permisos</a></li>
+                    <li runat="server" id="lnkProductos" visible="False"><a class="level1" href="/AdmProductos.aspx">Adm. Productos</a></li>
+                    <li runat="server" id="lnkBitacora" visible="False"><a class="level1" href="/Bitacora.aspx">Bitacora</a></li>
+                    <li runat="server" id="lnkBackUp" visible="False"><a class="level1" href="/BackupRestore.aspx">BackUp / Restore</a></li>
+                    <li runat="server" id="lnkDigitoVerificador" visible="False"><a class="level1" href="/DigitoVerificador.aspx">Digito Verificador</a></li>
 	            </ul>
             </div>
         </div>

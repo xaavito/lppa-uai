@@ -6,23 +6,7 @@ PresentacionWeb
 </name>
 </assembly>
 <members>
-<member name="F:PresentacionWeb.BackupRestore.btnBackUp">
-	<summary>
-Control btnBackUp.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:PresentacionWeb.Bitacora.dgvBitacoras">
-	<summary>
-Control dgvBitacoras.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="P:PresentacionWeb.My.MyWebExtension.Application">
+<member name="P:PresentacionWeb.My.MyWebExtension.Application">
 	<summary>
  Devuelve información sobre la aplicación actual.
  </summary>
@@ -55,17 +39,9 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
  Módulo usado para definir las propiedades que están disponibles en el espacio de nombres My para proyectos web.
  </summary>
 	<remarks></remarks>
-</member><member name="F:PresentacionWeb.Register.RegisterUser">
+</member><member name="F:PresentacionWeb.Usuarios.dgvUsuarios">
 	<summary>
-Control RegisterUser.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:PresentacionWeb.Register.RegisterUserWizardStep">
-	<summary>
-Control RegisterUserWizardStep.
+Control dgvUsuarios.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -146,17 +122,9 @@ Control PasswordRequired.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:PresentacionWeb.Login.RememberMe">
+</member><member name="F:PresentacionWeb.Login.lnkOlvido">
 	<summary>
-Control RememberMe.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:PresentacionWeb.Login.RememberMeLabel">
-	<summary>
-Control RememberMeLabel.
+Control lnkOlvido.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -165,14 +133,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member><member name="F:PresentacionWeb.Login.LoginButton">
 	<summary>
 Control LoginButton.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:PresentacionWeb.ChangePassword.ChangeUserPassword">
-	<summary>
-Control ChangeUserPassword.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -218,6 +178,14 @@ Control lnkUsuarios.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
+</member><member name="F:PresentacionWeb.Site.lnkPermisos">
+	<summary>
+Control lnkPermisos.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
 </member><member name="F:PresentacionWeb.Site.lnkProductos">
 	<summary>
 Control lnkProductos.
@@ -242,9 +210,33 @@ Control lnkBackUp.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
+</member><member name="F:PresentacionWeb.Site.lnkDigitoVerificador">
+	<summary>
+Control lnkDigitoVerificador.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
 </member><member name="F:PresentacionWeb.Site.MainContent">
 	<summary>
 Control MainContent.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PresentacionWeb.BackupRestore.btnBackUp">
+	<summary>
+Control btnBackUp.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PresentacionWeb.Bitacora.dgvBitacoras">
+	<summary>
+Control dgvBitacoras.
 </summary>
 	<remarks>
 Campo generado automáticamente.

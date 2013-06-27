@@ -86,22 +86,13 @@ Partial Public Class Login
     Protected WithEvents PasswordRequired As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''Control RememberMe.
+    '''Control lnkOlvido.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents RememberMe As Global.System.Web.UI.WebControls.CheckBox
-
-    '''<summary>
-    '''Control RememberMeLabel.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents RememberMeLabel As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lnkOlvido As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
     '''Control LoginButton.
