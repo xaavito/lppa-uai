@@ -26,8 +26,13 @@
                         [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Iniciar sesión</a> ]
                     </AnonymousTemplate>
                     <LoggedInTemplate>
-                        Bienvenido <span class="bold" id="UserName" runat="server"><%'=Current.Usuario.ToString%></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/"/> ]
+                        Bienvenido <span class="bold" id="UserName" runat="server">
+                        <%
+                            If Not Current.Usuario Is Nothing Then Response.Write(Current.Usuario.ToString)
+                            
+                            %>
+                        </span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" OnLoggedOut="HeadLoginStatus_LoggedOut" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/"/> ]
                     </LoggedInTemplate>
                 </asp:LoginView>
             </div>
@@ -39,8 +44,6 @@
 	            <ul runat="server" class="level1 static" tabindex="0" role="menubar" style="position: relative; width: auto; float: left;">
 		            <li runat="server" role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Default.aspx" tabindex="-1">Inicio</a></li>
                     <li runat="server" role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Default.aspx" tabindex="-1">Productos</a></li>
-                    <li visible="false" id="lnkAdministracion" runat="server" role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Administracion.aspx" tabindex="-1">Administracion</a></li>
-                    <li runat="server" role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Default.aspx" tabindex="-1">Productos</a></li>
 	            </ul>
             </div>
         </div>
@@ -51,9 +54,9 @@
             <div class="menu" id="NavigationMenuAdm" runat="server">
 	            <ul class="level1">
 		            <li runat="server" id="lnkUsuarios" visible="False"><a class="level1" href="/Usuarios.aspx">Usuarios</a></li>
-                    <li runat="server" id="lnkProductos" runat="server"><a class="level1" href="/Default.aspx">Productos</a></li>
-                    <li runat="server" id="lnkBitacora" runat="server"><a class="level1" href="/Administracion.aspx">Bitacora</a></li>
-                    <li runat="server" id="lnkBackUp" runat="server"><a class="level1" href="/Default.aspx">BackUp / Restore</a></li>
+                    <li runat="server" id="lnkProductos" visible="False" runat="server"><a class="level1" href="/AdmProductos.aspx">Adm. Productos</a></li>
+                    <li runat="server" id="lnkBitacora" visible="False" runat="server"><a class="level1" href="/Bitacora.aspx">Bitacora</a></li>
+                    <li runat="server" id="lnkBackUp" visible="False" runat="server"><a class="level1" href="/BackupRestore.aspx">BackUp / Restore</a></li>
 	            </ul>
             </div>
         </div>

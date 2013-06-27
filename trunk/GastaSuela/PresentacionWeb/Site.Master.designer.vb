@@ -41,15 +41,6 @@ Partial Public Class Site
     Protected WithEvents MenuPrincipal As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control lnkAdministracion.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lnkAdministracion As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
     '''Control NavigationMenuAdm.
     '''</summary>
     '''<remarks>

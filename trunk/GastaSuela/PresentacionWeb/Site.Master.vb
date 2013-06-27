@@ -1,11 +1,20 @@
 ﻿Imports Negocio
 Imports Excepciones
+Imports Servicios
 
 Public Class Site
     Inherits System.Web.UI.MasterPage
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Permissions()
+    End Sub
+
+    Protected Sub HeadLoginStatus_LoggedOut(sender As Object, e As EventArgs)
+        If Not Current.Usuario Is Nothing Then GesBitacoras.Guardar("Login", "Logout exitoso ({0})", New String() {Current.Usuario.Nick})
+        System.Web.Security.FormsAuthentication.SignOut()
+        Negocio.Current.Usuario = Nothing
+        Session.Abandon()
+        Response.Redirect("~/")
     End Sub
 
     ''' <summary>
