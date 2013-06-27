@@ -83,13 +83,10 @@ Public Class GesUsuarios
 
     End Sub
 
-    Public Shared Function Consultar(nick As String, dni As String, nombre As String, apellido As String, simplex As Boolean) As List(Of Usuario)
+    Public Shared Function Consultar(nick As String, nombre As String, apellido As String, simplex As Boolean) As List(Of Usuario)
 
         If String.IsNullOrWhiteSpace(nick) Then
             nick = Nothing
-        End If
-        If String.IsNullOrWhiteSpace(dni) Then
-            dni = Nothing
         End If
         If String.IsNullOrWhiteSpace(nombre) Then
             nombre = Nothing
@@ -105,9 +102,6 @@ Public Class GesUsuarios
             repository.AddParameter("@ACCION", "byNICK")
             repository.AddParameter("@ID", Nothing)
             repository.AddParameter("@NICK", nick)
-            repository.AddParameter("@DNI", dni)
-            repository.AddParameter("@NOMBRE", nombre)
-            repository.AddParameter("@APELLIDO", apellido)
             Dim dtUsuario As DataTable = repository.ExecuteDataTable()
 
             For Each dr As DataRow In dtUsuario.Rows
@@ -134,13 +128,17 @@ Public Class GesUsuarios
     End Function
 
     Public Shared Function Consultar(nick As String, dni As String, nombre As String, apellido As String) As List(Of Usuario)
-        Return Consultar(nick, dni, nombre, apellido, False)
+        Return Consultar(nick, nombre, apellido, False)
     End Function
     Public Shared Function Consultar(nick As String, simplex As Boolean) As List(Of Usuario)
-        Return Consultar(nick, Nothing, Nothing, Nothing, simplex)
+        Return Consultar(nick, Nothing, Nothing, simplex)
     End Function
     Public Shared Function Consultar(nick As String) As List(Of Usuario)
-        Return Consultar(nick, Nothing, Nothing, Nothing)
+        Return Consultar(nick, Nothing, Nothing, False)
+    End Function
+
+    Public Shared Function Consultar() As List(Of Usuario)
+        Return Consultar(Nothing, Nothing, Nothing, False)
     End Function
 
 End Class

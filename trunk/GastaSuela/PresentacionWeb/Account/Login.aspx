@@ -35,8 +35,8 @@
                              ValidationGroup="LoginUserValidationGroup">*</asp:RequiredFieldValidator>
                     </p>
                     <p>
-                        <asp:CheckBox ID="RememberMe" runat="server"/>
-                        <asp:Label ID="RememberMeLabel" runat="server" AssociatedControlID="RememberMe" CssClass="inline">Mantenerme conectado</asp:Label>
+                        <asp:HyperLink ID="lnkOlvido"  runat="server" Text="¿Olvido su clave?" Font-Underline="false" NavigateUrl="mailto:gastasuela@gmail.com?subject=Olvide mi clave" ></asp:HyperLink>    
+
                     </p>
                 </fieldset>
                 <p class="submitButton">
