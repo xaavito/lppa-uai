@@ -11,23 +11,23 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class BackupRestore
+Partial Public Class ViewCart
 
     '''<summary>
-    '''Control btnBackUp.
+    '''Control gvShoppingCart.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnBackUp As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents gvShoppingCart As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control btnRestore.
+    '''Control btnUpdateCart.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnRestore As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnUpdateCart As Global.System.Web.UI.WebControls.Button
 End Class

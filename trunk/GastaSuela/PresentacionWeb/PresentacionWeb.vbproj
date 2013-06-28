@@ -123,6 +123,9 @@
     <Content Include="Global.asax" />
     <Content Include="Images\Gasta Suela.jpg" />
     <Content Include="Images\pixel.gif" />
+    <Content Include="Images\Productos\zapa1.jpg" />
+    <Content Include="Images\Productos\zapa2.jpg" />
+    <Content Include="Images\Productos\zapa3.jpg" />
     <Content Include="Images\top-menu-left.jpg" />
     <Content Include="Message.aspx" />
     <Content Include="Permisos.aspx" />
@@ -133,6 +136,7 @@
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Usuarios.aspx" />
+    <Content Include="ViewCart.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -253,6 +257,13 @@
     </Compile>
     <Compile Include="Usuarios.aspx.vb">
       <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewCart.aspx.designer.vb">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCart.aspx.vb">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>

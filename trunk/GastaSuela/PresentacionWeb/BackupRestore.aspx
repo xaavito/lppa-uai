@@ -5,6 +5,10 @@
     <h2>
         Backup / Restore
     </h2>
-
+    <p>
     <asp:Button ID="btnBackUp" runat="server" Text="Realizar BackUp" />
+    </p>
+    <p>
+    <asp:Button ID="btnRestore" runat="server" Text="Realizar Restore" />
+    </p>
 </asp:Content>

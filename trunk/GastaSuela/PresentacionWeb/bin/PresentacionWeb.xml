@@ -6,7 +6,23 @@ PresentacionWeb
 </name>
 </assembly>
 <members>
-<member name="F:PresentacionWeb.Permisos.dgPermisos">
+<member name="F:PresentacionWeb.ViewCart.gvShoppingCart">
+	<summary>
+Control gvShoppingCart.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PresentacionWeb.ViewCart.btnUpdateCart">
+	<summary>
+Control btnUpdateCart.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PresentacionWeb.Permisos.dgPermisos">
 	<summary>
 Control dgPermisos.
 </summary>
@@ -245,6 +261,14 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member><member name="F:PresentacionWeb.BackupRestore.btnBackUp">
 	<summary>
 Control btnBackUp.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PresentacionWeb.BackupRestore.btnRestore">
+	<summary>
+Control btnRestore.
 </summary>
 	<remarks>
 Campo generado automáticamente.
