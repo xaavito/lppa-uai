@@ -13,7 +13,7 @@ Public Class Productos
         Try
 
             Dim productos As New List(Of Negocio.Producto)
-            productos = GesProductos.Consultar()
+            productos = GesProductos.Consultar(Nothing)
             gvShoppingCart.DataSource = productos
             gvShoppingCart.DataBind()
         Catch ex As Exception
@@ -26,14 +26,23 @@ Public Class Productos
         If (e.Row.RowType = DataControlRowType.DataRow) Then
             Dim Prod As Negocio.Producto = CType(e.Row.DataItem, Negocio.Producto)
 
-            Dim lblDescripcion As Label = CType(e.Row.FindControl("LblDescription"), Label)
-            lblDescripcion.Text = Prod.Nombre
+        End If
+    End Sub
 
-            Dim ImageProducto As Image = CType(e.Row.FindControl("ImgProducto"), Image)
-            ImageProducto.ImageUrl = Prod.Foto
+    Protected Sub gvShoppingCart_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs)
+        If (e.CommandName = "AddToCart") Then
 
-            Dim LblPrecio As Label = CType(e.Row.FindControl("LblPrecio"), Label)
-            LblPrecio.Text = Prod.PrecioUnitario.ToString
+            Dim index As Integer = Convert.ToInt32(e.CommandArgument)
+            Dim row As GridViewRow = gvShoppingCart.Rows(index)
+
+
+            Dim DDCantidad As DropDownList = CType(row.FindControl("DDCantidad"), DropDownList)
+            Dim Cantidad As Integer = Convert.ToInt32(DDCantidad.SelectedValue)
+
+            Dim ProdId As Integer = CType(CType(row.FindControl("OID"), HiddenField).Value, Integer)
+
+            ShoppingCart.Instance.AgregarItem(ProdId, Cantidad)
+            Response.Redirect("ViewCart.aspx")
         End If
     End Sub
 

@@ -3,27 +3,27 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-        Productos
+        Productos (<a href="ViewCart.aspx">Ver Carrito</a>)
     </h2>
 	<p>
-        <asp:GridView runat="server" ID="gvShoppingCart" AutoGenerateColumns="false" GridLines="None"
-            Width="100%" CellPadding="4" ShowFooter="true" OnRowDataBound="gvShoppingCart_RowDataBound">
-            <HeaderStyle HorizontalAlign="Left" BackColor="#3D7169" ForeColor="#FFFFFF" />
-            <FooterStyle HorizontalAlign="Right" BackColor="#6C6B66" ForeColor="#FFFFFF" />
-            <AlternatingRowStyle BackColor="#F8F8F8" />
-            <Columns>
-                <asp:TemplateField HeaderText="Producto">
-                    <ItemTemplate>
-                        <asp:Image ID="ImgProducto" Style="max-width: 142px; max-height: 118px;" runat="server" />
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="Descripcion">
-                    <ItemTemplate>
-                        <div style="margin-left: 27px;">
-                            <asp:Label ID="LblDescription" runat="server" Text="Label"></asp:Label>
-                        </div>
-                    </ItemTemplate>
-                </asp:TemplateField>
+
+    <asp:GridView ID="gvShoppingCart" runat="server" AutoGenerateColumns="False" 
+    PageSize="15" Width="700px"
+    CssClass="table table-striped table-bordered table-condensed" CellPadding="4" 
+            ForeColor="#333333" GridLines="None"  OnRowDataBound="gvShoppingCart_RowDataBound" OnRowCommand="gvShoppingCart_RowCommand">
+        <AlternatingRowStyle BackColor="White" />
+<Columns>
+
+                <asp:TemplateField ShowHeader="False">
+                  <ItemTemplate>
+                    <asp:HiddenField ID="OID" runat="server" Value='<%# Eval("OID") %>' />
+                  </ItemTemplate>
+                </asp:TemplateField>    
+                            
+                <asp:ImageField DataImageUrlField="Foto" ControlStyle-Height="118px" ControlStyle-Width="142px"></asp:ImageField>
+
+                <asp:BoundField DataField="Nombre" HeaderText="Descripcion" />
+
                 <asp:TemplateField HeaderText="Cantidad">
                     <ItemTemplate>
                         <div style="margin-left: 50px">
@@ -36,20 +36,26 @@
                         </div>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="Precio">
-                    <ItemTemplate>
-                        <div style="margin-left: 27px;">
-                            <asp:Label ID="LblPrecio" runat="server" Text=""></asp:Label>
-                        </div>
-                    </ItemTemplate>
-                </asp:TemplateField>
+                <asp:BoundField DataField="PrecioUnitario" HeaderText="Precio" DataFormatString="{0:$ 0.00}"  />
                 <asp:TemplateField>
                     <ItemTemplate>
-                        <asp:Button ID="BtnAgregarCarro" runat="server" Text="Agregar a carrito" OnClientClick="alert('Hola');" />
+                    <asp:Button ID="BtnAgregarCarro" runat="server" 
+                          CommandName="AddToCart" 
+                          CommandArgument="<%# Container.DataItemIndex %>"
+                          Text="Agregar a carrito" />                        
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
-        </asp:GridView>
-	</p>
-    
+        <EditRowStyle BackColor="#7C6F57" />
+        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#E3EAEB" />
+        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+        <SortedAscendingCellStyle BackColor="#F8FAFA" />
+        <SortedAscendingHeaderStyle BackColor="#246B61" />
+        <SortedDescendingCellStyle BackColor="#D4DFE1" />
+        <SortedDescendingHeaderStyle BackColor="#15524A" />
+    </asp:GridView>    
+    </p>
 </asp:Content>

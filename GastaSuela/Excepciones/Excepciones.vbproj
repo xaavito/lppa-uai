@@ -74,6 +74,7 @@
     <Compile Include="DataLayer\DAOException.vb" />
     <Compile Include="ModuloSeguridad\Bitacora\BitacoraException.vb" />
     <Compile Include="ModuloSeguridad\Perfil\PerfilException.vb" />
+    <Compile Include="ModuloSeguridad\Producto\ProductoException.vb" />
     <Compile Include="ModuloSeguridad\Usuario\UserException.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
