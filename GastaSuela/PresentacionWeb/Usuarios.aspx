@@ -16,6 +16,7 @@
     <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
     <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
     <asp:BoundField DataField="Email" HeaderText="Email" />
+    <asp:BoundField DataField="Perfil" HeaderText="Perfil" />
     </Columns>
         <EditRowStyle BackColor="#7C6F57" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
