@@ -6,7 +6,15 @@ PresentacionWeb
 </name>
 </assembly>
 <members>
-<member name="P:PresentacionWeb.My.MyWebExtension.Application">
+<member name="F:PresentacionWeb.Permisos.dgPermisos">
+	<summary>
+Control dgPermisos.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="P:PresentacionWeb.My.MyWebExtension.Application">
 	<summary>
  Devuelve información sobre la aplicación actual.
  </summary>
@@ -52,6 +60,14 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
  Verifica los permisos del módulo y los controles
  </summary>
 	<remarks></remarks>
+</member><member name="F:PresentacionWeb.Productos.gvShoppingCart">
+	<summary>
+Control gvShoppingCart.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
 </member><member name="M:PresentacionWeb.My.MyApplication.HandlerException(System.Web.UI.Page,System.Exception)">
 	<summary>
  Maneja las excepciones de la aplicación
