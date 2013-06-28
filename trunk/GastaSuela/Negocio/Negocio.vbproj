@@ -76,10 +76,11 @@
     <Compile Include="Current.vb" />
     <Compile Include="Enumerados.vb" />
     <Compile Include="IPrototype.vb" />
-    <Compile Include="ModuloSeguridad\Backup.vb" />
-    <Compile Include="ModuloSeguridad\Bitacora.vb" />
-    <Compile Include="ModuloSeguridad\Modulo.vb" />
-    <Compile Include="ModuloSeguridad\ModuloAccion.vb" />
+    <Compile Include="Modulo\Backup.vb" />
+    <Compile Include="Modulo\Bitacora.vb" />
+    <Compile Include="Modulo\Producto.vb" />
+    <Compile Include="Modulo\Modulo.vb" />
+    <Compile Include="Modulo\ModuloAccion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -95,10 +96,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ModuloSeguridad\Perfil.vb" />
-    <Compile Include="ModuloSeguridad\Permiso.vb" />
-    <Compile Include="ModuloSeguridad\Restore.vb" />
-    <Compile Include="ModuloSeguridad\Usuario.vb" />
+    <Compile Include="Modulo\Perfil.vb" />
+    <Compile Include="Modulo\Permiso.vb" />
+    <Compile Include="Modulo\Restore.vb" />
+    <Compile Include="Modulo\Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
