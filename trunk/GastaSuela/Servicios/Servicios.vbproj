@@ -69,11 +69,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModuloSeguridad\GesBitacoras.vb" />
-    <Compile Include="ModuloSeguridad\GesMantenimiento.vb" />
-    <Compile Include="ModuloSeguridad\GesPerfiles.vb" />
-    <Compile Include="ModuloSeguridad\GesPermisos.vb" />
-    <Compile Include="ModuloSeguridad\GesUsuarios.vb" />
+    <Compile Include="Modulo\GesProductos.vb" />
+    <Compile Include="Modulo\GesBitacoras.vb" />
+    <Compile Include="Modulo\GesMantenimiento.vb" />
+    <Compile Include="Modulo\GesPerfiles.vb" />
+    <Compile Include="Modulo\GesPermisos.vb" />
+    <Compile Include="Modulo\GesUsuarios.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
