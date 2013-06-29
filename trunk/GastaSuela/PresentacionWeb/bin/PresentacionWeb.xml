@@ -6,31 +6,7 @@ PresentacionWeb
 </name>
 </assembly>
 <members>
-<member name="F:PresentacionWeb.ViewCart.gvShoppingCart">
-	<summary>
-Control gvShoppingCart.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:PresentacionWeb.ViewCart.btnUpdateCart">
-	<summary>
-Control btnUpdateCart.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:PresentacionWeb.Permisos.dgPermisos">
-	<summary>
-Control dgPermisos.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="P:PresentacionWeb.My.MyWebExtension.Application">
+<member name="P:PresentacionWeb.My.MyWebExtension.Application">
 	<summary>
  Devuelve información sobre la aplicación actual.
  </summary>
@@ -170,6 +146,14 @@ Control LoginButton.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
+</member><member name="F:PresentacionWeb.Permisos.dgPermisos">
+	<summary>
+Control dgPermisos.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
 </member><member name="F:PresentacionWeb.Site.HeadContent">
 	<summary>
 Control HeadContent.
@@ -253,6 +237,22 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member><member name="F:PresentacionWeb.Site.MainContent">
 	<summary>
 Control MainContent.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PresentacionWeb.ViewCart.gvShoppingCart">
+	<summary>
+Control gvShoppingCart.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PresentacionWeb.ViewCart.btnUpdateCart">
+	<summary>
+Control btnUpdateCart.
 </summary>
 	<remarks>
 Campo generado automáticamente.
