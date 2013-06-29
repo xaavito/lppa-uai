@@ -185,6 +185,7 @@
   <ItemGroup>
     <Content Include="DB\GastaSuela_v1.sql" />
     <Content Include="DB\GastaSuela_v2.sql" />
+    <Content Include="DB\GastaSuela_v3.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
