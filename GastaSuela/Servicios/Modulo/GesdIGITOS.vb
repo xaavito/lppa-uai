@@ -3,7 +3,7 @@ Imports DataLayer
 Imports Excepciones
 Public Class GesDigitos
 
-    'Recalcula los digitos verificadores
+    'Recalcula los digitos verificadores.
     Public Shared Sub Recalcular()
         Dim repository As IRepository = RepositoryFactory.Create()
         Try
