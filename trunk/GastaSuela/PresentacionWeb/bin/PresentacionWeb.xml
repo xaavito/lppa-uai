@@ -66,6 +66,22 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
  </summary>
 	<param name="ex">Exception ocurrida</param>
 	<remarks></remarks>
+</member><member name="F:PresentacionWeb.DigitoVerificador.dgDigitosVerificadores">
+	<summary>
+Control dgDigitosVerificadores.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PresentacionWeb.DigitoVerificador.btnRecalcular">
+	<summary>
+Control btnRecalcular.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
 </member><member name="F:PresentacionWeb.Login.FailureText">
 	<summary>
 Control FailureText.

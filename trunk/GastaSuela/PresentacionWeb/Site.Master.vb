@@ -6,6 +6,7 @@ Public Class Site
     Inherits System.Web.UI.MasterPage
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        VerificaDigitos()
         Permissions()
     End Sub
 
@@ -15,6 +16,30 @@ Public Class Site
         Negocio.Current.Usuario = Nothing
         Session.Abandon()
         Response.Redirect("~/")
+    End Sub
+
+    Sub VerificaDigitos()
+
+        If Utilidades.Pages.GetCurrentPageName().ToLower <> "digitoverificador.aspx" _
+            And Utilidades.Pages.GetCurrentPageName().ToLower <> "message.aspx" _
+            And Utilidades.Pages.GetCurrentPageName().ToLower <> "login.aspx" Then
+
+            Try
+                If GesDigitos.Verificar().Rows.Count > 0 Then
+                    If Context.User.IsInRole("WebMaster") Then
+                        Response.Redirect("/DigitoVerificador.aspx", False)
+                    Else
+                        Response.Redirect("~/Message.aspx?title=Mensaje&text=Disculpe las molestias, tenemos un problema, vuelva pronto", False)
+                    End If
+                End If
+            Catch ex As Exception
+                My.Application.HandlerException(ex)
+            End Try
+
+
+        End If
+
+
     End Sub
 
     ''' <summary>
@@ -44,39 +69,9 @@ Public Class Site
                         If Not ObjCtrl Is Nothing Then
                             If acc.Permitido Then ObjCtrl.Visible = True
                         End If
-                        'Dim values As String() = acc.Accion.Split("|")
-                        'If values.Length = 2 Then
-
-                        '    Dim ObjMenu As System.Web.UI.WebControls.Menu = Me.FindControl(values(0))
-
-                        '    If Not ObjMenu Is Nothing Then
-                        '        For Each i As System.Web.UI.WebControls.MenuItem In ObjMenu.Items
-                        '            If i.Value = values(1) Then
-                        '                If acc.Permitido Then
-                        '                    i.Enabled = True
-                        '                Else
-                        '                    ObjMenu.Items.Remove(i)
-                        '                End If
-
-                        '            End If
-                        '        Next
-                        '    End If
-
-                        'End If
                     Next
                 End If
             Next
-
-
-
-
-            'For Each ctrl As Windows.Forms.Control In Me.Controls
-            '    If Not ctrl.Tag Is Nothing Then
-            '        If Not Current.Usuario.Perfil.validarPermiso(Modulo, ctrl.Tag.ToString) Then
-            '            ctrl.Enabled = False
-            '        End If
-            '    End If
-            'Next
 
         Catch ex As Exception
             My.Application.HandlerException(ex)
