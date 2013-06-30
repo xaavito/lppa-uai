@@ -14,6 +14,33 @@ Option Explicit On
 Partial Public Class BackupRestore
 
     '''<summary>
+    '''Control FailureText.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents FailureText As Global.System.Web.UI.WebControls.Literal
+
+    '''<summary>
+    '''Control BackUpRestoreValidationSummary.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BackUpRestoreValidationSummary As Global.System.Web.UI.WebControls.ValidationSummary
+
+    '''<summary>
+    '''Control dgBackUps.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dgBackUps As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
     '''Control btnBackUp.
     '''</summary>
     '''<remarks>
@@ -23,11 +50,11 @@ Partial Public Class BackupRestore
     Protected WithEvents btnBackUp As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control btnRestore.
+    '''Control dgRestores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnRestore As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents dgRestores As Global.System.Web.UI.WebControls.GridView
 End Class

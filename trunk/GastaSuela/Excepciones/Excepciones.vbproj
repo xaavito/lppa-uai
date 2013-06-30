@@ -72,6 +72,7 @@
     <Compile Include="Config\ConfigException.vb" />
     <Compile Include="CustomException.vb" />
     <Compile Include="DataLayer\DAOException.vb" />
+    <Compile Include="ModuloSeguridad\BackUpRestore\BackUpRestoreException.vb" />
     <Compile Include="ModuloSeguridad\Bitacora\BitacoraException.vb" />
     <Compile Include="ModuloSeguridad\DigitoVerificador\DigitoVerificadorException.vb" />
     <Compile Include="ModuloSeguridad\Perfil\PerfilException.vb" />

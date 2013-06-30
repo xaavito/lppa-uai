@@ -274,6 +274,30 @@ Control btnUpdateCart.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
+</member><member name="F:PresentacionWeb.BackupRestore.FailureText">
+	<summary>
+Control FailureText.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PresentacionWeb.BackupRestore.BackUpRestoreValidationSummary">
+	<summary>
+Control BackUpRestoreValidationSummary.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:PresentacionWeb.BackupRestore.dgBackUps">
+	<summary>
+Control dgBackUps.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
 </member><member name="F:PresentacionWeb.BackupRestore.btnBackUp">
 	<summary>
 Control btnBackUp.
@@ -282,9 +306,9 @@ Control btnBackUp.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:PresentacionWeb.BackupRestore.btnRestore">
+</member><member name="F:PresentacionWeb.BackupRestore.dgRestores">
 	<summary>
-Control btnRestore.
+Control dgRestores.
 </summary>
 	<remarks>
 Campo generado automáticamente.
