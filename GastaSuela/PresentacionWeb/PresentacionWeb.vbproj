@@ -93,30 +93,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
-    <Content Include="Administracion.aspx" />
     <Content Include="AdmProductos.aspx" />
     <Content Include="BackupRestore.aspx" />
-    <Content Include="bin\DataLayer.dll" />
-    <Content Include="bin\DataLayer.pdb" />
-    <Content Include="bin\DataLayer.xml" />
-    <Content Include="bin\Excepciones.dll" />
-    <Content Include="bin\Excepciones.pdb" />
-    <Content Include="bin\Excepciones.xml" />
-    <Content Include="bin\Negocio.dll" />
-    <Content Include="bin\Negocio.pdb" />
-    <Content Include="bin\Negocio.xml" />
-    <Content Include="bin\PresentacionWeb.dll" />
-    <Content Include="bin\PresentacionWeb.pdb" />
-    <Content Include="bin\PresentacionWeb.xml" />
-    <Content Include="bin\Seguridad.dll" />
-    <Content Include="bin\Seguridad.pdb" />
-    <Content Include="bin\Seguridad.xml" />
-    <Content Include="bin\Servicios.dll" />
-    <Content Include="bin\Servicios.pdb" />
-    <Content Include="bin\Servicios.xml" />
-    <Content Include="bin\Utilidades.dll" />
-    <Content Include="bin\Utilidades.pdb" />
-    <Content Include="bin\Utilidades.xml" />
     <Content Include="Bitacora.aspx" />
     <Content Include="DigitoVerificador.aspx" />
     <Content Include="Global.asax" />
@@ -152,13 +130,6 @@
     </Compile>
     <Compile Include="Account\Login.aspx.vb">
       <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Administracion.aspx.designer.vb">
-      <DependentUpon>Administracion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Administracion.aspx.vb">
-      <DependentUpon>Administracion.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="AdmProductos.aspx.designer.vb">
@@ -282,6 +253,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.vbproj">
