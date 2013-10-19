@@ -30,4 +30,30 @@ Public Class GesProductos
 
     End Function
 
+    Public Shared Function Consultar(cotizacion As Decimal) As List(Of Producto)
+        Dim productos As New List(Of Producto)
+        Try
+            Dim repository As IRepository = RepositoryFactory.Create()
+            repository.Nombre = "PRODUCTOS_SP"
+            repository.AddParameter("@ID", Nothing)
+            Dim dtProducto As DataTable = repository.ExecuteDataTable()
+
+            For Each dr As DataRow In dtProducto.Rows
+                Dim p As New Producto()
+                p.Persistencia = EstadoPersistencia.UPDATE
+                p.OID = Convert.ToInt32(dr.Item("proID"))
+                p.Nombre = dr.Item("proNOMBRE").ToString()
+                p.PrecioUnitario = (Convert.ToDecimal(dr.Item("proPrecioUnit")) / cotizacion)
+                p.Foto = dr.Item("proFoto").ToString()
+                productos.Add(p)
+            Next
+
+        Catch ex As Exception
+            Throw New ProductoGetException()
+        End Try
+
+        Return productos
+
+    End Function
+
 End Class
