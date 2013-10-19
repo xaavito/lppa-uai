@@ -6,7 +6,10 @@
         Productos (<a href="ViewCart.aspx">Ver Carrito</a>)
     </h2>
 	<p>
-
+        
+    Moneda: <asp:DropDownList ID="ddlMoneda" runat="server" 
+            OnSelectedIndexChanged="ddlMoneda_SelectedIndexChanged" AutoPostBack="True">
+            </asp:DropDownList>
     <asp:GridView ID="gvShoppingCart" runat="server" AutoGenerateColumns="False" 
     PageSize="15" Width="700px"
     CssClass="table table-striped table-bordered table-condensed" CellPadding="4" 

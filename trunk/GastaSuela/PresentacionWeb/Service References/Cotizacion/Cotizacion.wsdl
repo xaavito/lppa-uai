@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Obtener">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="moneda" type="tns:Moneda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="Moneda">
+        <s:restriction base="s:string">
+          <s:enumeration value="Peso" />
+          <s:enumeration value="Dolar" />
+          <s:enumeration value="Real" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ObtenerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObtenerSoapIn">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CotizacionSoap">
+    <wsdl:operation name="Obtener">
+      <wsdl:input message="tns:ObtenerSoapIn" />
+      <wsdl:output message="tns:ObtenerSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CotizacionSoap" type="tns:CotizacionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://tempuri.org/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CotizacionSoap12" type="tns:CotizacionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Obtener">
+      <soap12:operation soapAction="http://tempuri.org/Obtener" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Cotizacion">
+    <wsdl:port name="CotizacionSoap" binding="tns:CotizacionSoap">
+      <soap:address location="http://localhost:50246/Cotizacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CotizacionSoap12" binding="tns:CotizacionSoap12">
+      <soap12:address location="http://localhost:50246/Cotizacion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
