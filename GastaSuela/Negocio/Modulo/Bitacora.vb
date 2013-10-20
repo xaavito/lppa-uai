@@ -1,4 +1,5 @@
-﻿Public Class Bitacora
+﻿<Serializable()> _
+Public Class Bitacora
     Inherits BasePersistencia
     Private _usuario As Usuario
     Private _fecha As System.Nullable(Of Date)

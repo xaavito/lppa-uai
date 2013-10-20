@@ -1,6 +1,8 @@
 ﻿Imports Negocio
 Imports DataLayer
 Imports Excepciones
+Imports System.Xml.Serialization
+
 Public Class GesBitacoras
 
     Public Shared Sub Guardar(bitacora As Bitacora)
@@ -84,6 +86,20 @@ Public Class GesBitacoras
         End Try
 
         Return bitacoras
+
+    End Function
+
+    Public Shared Function ConsultarXML() As String
+        Dim bitacoras As New List(Of Bitacora)
+        bitacoras = Consultar()
+
+        Dim ser As New XmlSerializer(bitacoras.GetType())
+
+        Dim sb As New System.Text.StringBuilder()
+        Dim writer As New System.IO.StringWriter(sb)
+        ser.Serialize(writer, bitacoras)
+
+        Return sb.ToString()
 
     End Function
 

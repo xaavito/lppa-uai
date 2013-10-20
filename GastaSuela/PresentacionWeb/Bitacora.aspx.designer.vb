@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class Bitacora
 
     '''<summary>
+    '''Control btnLista.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnLista As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control dgvBitacoras.
     '''</summary>
     '''<remarks>
