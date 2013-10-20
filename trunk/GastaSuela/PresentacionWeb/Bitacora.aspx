@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-        Bitacora
+        Bitacora <asp:Button ID="btnLista" runat="server" Text="Ver lista completa" OnClientClick="VerLista();" />
     </h2>
     <p>
     <asp:GridView ID="dgvBitacoras" runat="server" AutoGenerateColumns="False" 
@@ -28,6 +28,13 @@
         <SortedDescendingHeaderStyle BackColor="#15524A" />
     </asp:GridView>
     </p>
+
+<script type="text/javascript">
+function VerLista()
+{
+    window.open("/Bitacora.aspx?lista=true");
+}
+</script>
 </asp:Content>
 
 

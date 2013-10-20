@@ -98,6 +98,7 @@
     <Content Include="AdmProductos.aspx" />
     <Content Include="BackupRestore.aspx" />
     <Content Include="Bitacora.aspx" />
+    <Content Include="Bitacora.xslt" />
     <Content Include="DigitoVerificador.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Gasta Suela.jpg" />
