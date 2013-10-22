@@ -96,6 +96,7 @@
     function loopRotate() {
 
         if (counter == 360) {
+            counter = 0;
             clearInterval(interval);
             xin = 200;
             interval = setInterval(loopOut, 1000 / 30);
