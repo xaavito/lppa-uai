@@ -102,6 +102,8 @@
     <Content Include="DigitoVerificador.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Gasta Suela.jpg" />
+    <Content Include="Images\GastaSuela.png" />
+    <Content Include="Images\GastaSuelaLogo.png" />
     <Content Include="Images\pixel.gif" />
     <Content Include="Images\Productos\zapa1.jpg" />
     <Content Include="Images\Productos\zapa2.jpg" />
